@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function getuser(suc,fail){
+
+            let users = [{name: "danish"}, {name: "Shivam"}];
+        if(users.length>0){
+            suc(users);
+        }
+        else{
+            fail("Not data");
+        }
+    
+        function getpost(user,suc,fail){
+    
+            let post  = [];
+        
+            if(post> 0){
+                suc(post);
+            }
+            else{
+                fail("Error ::");
+            }
+        
+        }
+        
+
+        setTimeout(() => {
+            getuser(function(users){
+       
+
+                setTimeout(function(){
+                    getpost(user[0],function(post){
+                        
+                    }, function(er){
+
+                    })
+                },0)
+
+            },function(err){
+       
+            })
+       }, 0);
+} 
+
+
+
+    </script>
+</body>
+</html>
